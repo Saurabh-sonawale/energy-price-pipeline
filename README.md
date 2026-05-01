@@ -416,29 +416,6 @@ This project demonstrates production-oriented design decisions:
 - CI test workflow
 - GCP deployment mapping
 
-For a true production trading system, add:
-
-- Schema Registry
-- Dead-letter Kafka topics
-- Stronger exactly-once semantics
-- Backtesting engine
-- Market transaction-cost modeling
-- Model registry promotion gates
-- Feature store
-- Secrets manager integration in runtime
-- End-to-end data quality checks
-
----
-
-## Resume-Ready Bullet Points
-
-- Built an end-to-end real-time energy price forecasting pipeline using Python, Kafka, PostgreSQL, Docker, Prophet, and MLflow to ingest, process, model, and serve market signals.
-- Engineered streaming features including lag prices, rolling averages, time-based seasonality indicators, weather joins, and anomaly flags for energy price forecasting.
-- Designed Kafka-based event architecture with separate weather, energy, processed-data, and trading-signal topics to support scalable real-time processing.
-- Implemented Prophet model training and validation with MAE/RMSE tracking, model artifact persistence, and MLflow experiment logging.
-- Developed configurable BUY/SELL/HOLD trading signal logic with position limits and daily trade risk controls.
-- Created PostgreSQL schemas and utility modules for raw ingestion records, processed features, forecasts, and trading signals.
-- Containerized the full system with Docker Compose and documented Tableau and Google Cloud deployment workflows.
 
 ---
 
