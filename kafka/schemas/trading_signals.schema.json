@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TradingSignal",
+  "type": "object",
+  "required": ["event_time", "actual_price", "forecast_price", "signal"],
+  "properties": {
+    "event_time": {"type": "string", "format": "date-time"},
+    "actual_price": {"type": "number"},
+    "forecast_price": {"type": "number"},
+    "signal": {"type": "string", "enum": ["BUY", "SELL", "HOLD"]},
+    "position_mwh": {"type": "number"},
+    "reason": {"type": "string"}
+  }
+}

@@ -1,0 +1,19 @@
+streaming:
+  poll_interval_seconds: 60
+  kafka_partitions: 3
+
+features:
+  rolling_windows: [3, 24]
+  lag_periods: [1, 3]
+  anomaly_zscore_threshold: 3.0
+
+model:
+  algorithm: prophet
+  validation_split: 0.2
+  forecast_horizon_hours: 24
+
+trading:
+  buy_threshold: 3.0
+  sell_threshold: 3.0
+  max_position_mwh: 10
+  max_daily_trades: 20

@@ -1,0 +1,8 @@
+# Example cron schedule for a VM-based deployment.
+# In Docker Compose, services already run continuously. These jobs retrain and export dashboards.
+
+# Retrain Prophet every day at 02:00 UTC
+0 2 * * * cd /opt/energy-price-pipeline && docker compose --profile batch run --rm model-trainer >> logs/model-trainer.log 2>&1
+
+# Export Tableau CSVs every hour
+0 * * * * cd /opt/energy-price-pipeline && docker compose --profile batch run --rm dashboard-export >> logs/dashboard-export.log 2>&1

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EnergyPrice",
+  "type": "object",
+  "required": ["event_time", "market", "location", "price_mwh", "demand_mw"],
+  "properties": {
+    "event_time": {"type": "string", "format": "date-time"},
+    "source": {"type": "string"},
+    "market": {"type": "string"},
+    "location": {"type": "string"},
+    "price_mwh": {"type": "number"},
+    "demand_mw": {"type": "number"},
+    "fuel_mix_gas_pct": {"type": "number"},
+    "raw": {"type": "object"}
+  }
+}

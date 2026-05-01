@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProcessedData",
+  "type": "object",
+  "required": ["event_time", "price_mwh", "hour", "day_of_week"],
+  "properties": {
+    "event_time": {"type": "string", "format": "date-time"},
+    "price_mwh": {"type": "number"},
+    "demand_mw": {"type": "number"},
+    "temperature": {"type": "number"},
+    "price_lag_1": {"type": ["number", "null"]},
+    "price_lag_3": {"type": ["number", "null"]},
+    "price_rolling_3": {"type": ["number", "null"]},
+    "price_rolling_24": {"type": ["number", "null"]},
+    "hour": {"type": "integer"},
+    "day_of_week": {"type": "integer"},
+    "is_weekend": {"type": "integer"},
+    "is_anomaly": {"type": "boolean"}
+  }
+}

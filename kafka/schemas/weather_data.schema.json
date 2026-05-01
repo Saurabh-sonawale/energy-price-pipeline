@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WeatherData",
+  "type": "object",
+  "required": ["event_time", "city", "temperature", "humidity", "wind_speed"],
+  "properties": {
+    "event_time": {"type": "string", "format": "date-time"},
+    "source": {"type": "string"},
+    "city": {"type": "string"},
+    "temperature": {"type": "number"},
+    "humidity": {"type": "number"},
+    "pressure": {"type": "number"},
+    "wind_speed": {"type": "number"},
+    "clouds": {"type": "number"},
+    "weather_main": {"type": "string"},
+    "raw": {"type": "object"}
+  }
+}
